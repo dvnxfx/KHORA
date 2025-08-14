@@ -1,0 +1,237 @@
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --highlight: #cccccc;
+  --highlight-transparent: #cccccc(100% 0 -0.00011 / 0.663);
+  --bg-color: #f0f0f0;
+  --code-bg: #efefef;
+  --shadow: 8px 8px 0px var(--black);
+  --shadow-sm: 5px 5px 0px var(--black);
+  --shadow-pressed: 3px 3px 0px var(--black);
+  --border-thick: 4px solid var(--black);
+  --border-thin: 3px solid var(--black);
+  --border-code: 2px solid var(--black);
+  --radius: 4px;
+  --blur: 8px;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Space Mono', monospace;
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+
+.neubrutal-box {
+  position: relative;
+  background-color: var(--white);
+  /* border: var(--border-thick); */
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  z-index: 1;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.neubrutal-box1 {
+  position: relative;
+  background-color: var(--white);
+  border: var(--border-thick);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  z-index: 1;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+
+
+.neubrutal-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--highlight-transparent);
+  border: var(--border-thick);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  z-index: -1;
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  /* opacity: 0.7; */
+}
+
+
+code, pre {
+  background-color: var(--code-bg);
+  padding: 10px;
+  border: var(--border-code);
+  font-family: monospace;
+  font-size: 0.95rem;
+  display: block;
+  border-radius: var(--radius);
+  white-space: pre-wrap;
+  text-align: left;
+  margin: 0 auto 20px auto;
+}
+
+.code-section h2 {
+  color: var(--black);
+  border-bottom: 2px solid var(--highlight);
+  padding-bottom: 5px;
+  margin-top: 2rem;
+}
+
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+.btn-retro {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--white);
+  color: var(--black);
+  border: var(--border-thin);
+  border-radius: var(--radius);
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.btn-retro-primary {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.btn-retro:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 var(--black);
+  background-color: var(--highlight);
+}
+
+.btn-retro-primary:hover {
+  background-color: #ffffff;
+}
+
+.button-group-center {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+  padding: 0 1rem;
+}
+
+.btn-retro.btn-sm {
+  padding: 0.5rem 1rem;     /
+  font-size: 0.85rem;         
+  white-space: normal;
+  line-height: 1.4;
+  max-width: 20rem;          
+  text-align: center;
+  display: inline-flex;       /* Melhor alinhamento */
+  align-items: center;
+  min-height: 2.5rem;
+}
+
+.about-me {
+  position: relative; /* Necessário para o pseudo-elemento */
+  background-color: var(--white);
+  border: 4px solid var(--black); /* Borda grossa preta */
+  box-shadow: var(--shadow);/* Sombra característica */
+  border-radius: var(--radius); /* Cantos levemente arredondados */
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 800px;
+  z-index: 1;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* blur about me */
+.about-me::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--highlight-transparent);
+  border: 4px solid var(--black);
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.66);
+  border-radius: var(--radius);
+  z-index: -1;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  /* opacity: 0.7; */
+}
+
+/* Utilitários */
+section {
+  margin-bottom: 2.5rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .neubrutal-box {
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-retro {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

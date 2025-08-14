@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia Rápido: .gitignore</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+New:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="neubrutal-box">
+    <h1>APLICANDO O .GITIGNORE NO SEU PROJETO</h1>
+    <p class="lead">O .gitignore quando usado em um projeto, ignora arquivos e diretórios sensíveis ou desnecessários que você não quer que sejam rastreado pelo versionamento do seu código.</p>
+
+    <section class="mt-4">
+      <h2>CRIANDO E CONFIGURANDO O .GITIGNORE</h2>
+      <pre><code># No terminal PowerShell:
+New-Item .gitignore -ItemType File
+
+# Terminal comum:
+touch .gitignore
+
+# Dentro do arquivo .gitignore, adicione os arquivos/diretórios a ignorar:
+node_modules/
+.env
+
+# Se os arquivos já estiverem sendo versionados:
+git rm --cached -r node_modules .env
+git commit -m "Ocultando arquivos sensíveis"
+git push</code></pre>
+    </section>
+
+    <section class="mt-4">
+      <h2>ADICIONANDO ARQUIVOS DE VOLTA NO GIT</h2>
+      <pre><code># Remova as linhas do .gitignore:
+# node_modules/
+# .env
+
+# Depois:
+git add node_modules .env
+git commit -m "Adicionando arquivos ocultados"
+git push</code></pre>
+    </section>
+
+    <section class="mt-4">
+      <h2>DICA</h2>
+      <p>Use um gerador automático de .gitignore de acordo com a tecnologia que você está usando:</p>
+      <div class="button-group">
+        <a href="https://www.toptal.com/developers/gitignore" target="_blank" class="btn-retro">Acessar Gerador</a>
+      </div>
+    </section>
+
+    <section class="mt-4">
+      <h2>DOCUMENTAÇÃO</h2>
+      <p>Leia a documentação oficial do Git para entender mais sobre o funcionamento do .gitignore:</p>
+      <div class="button-group">
+        <a href="https://git-scm.com/docs/gitignore/pt_BR" target="_blank" class="btn-retro">Acessar Documentação</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
