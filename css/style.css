@@ -314,18 +314,30 @@ section {
 
     #musica {
     display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    margin-top: 20px; /* opcional */
+    justify-content: center;
+    margin-top: 20px; 
     }
 
     #musica audio {
     width: 100%;
-    max-width: 400px;       /* tamanho parecido com os botões */
+    max-width: 400px;       
     padding: 0.5rem 1rem;
-    border: 3px solid #000; /* mesma espessura que btn-retro */
-    border-radius: 6px;     /* mesma do btn-retro */
-    box-shadow: 5px 5px 0px #000; /* sombra parecida */
-    background: #fff;       /* mesma cor do btn-retro */
-    accent-color: #000;     /* cor dos controles */
-    font-family: 'Courier New', monospace; /* pra combinar com fonte dos botões */
+    border: 3px solid #000; 
+    border-radius: 6px;     
+    box-shadow: 5px 5px 0px #000; 
+    background: #fff;       
+    accent-color: #000;     
+    font-family: 'Courier New', monospace; 
     }
+
+.social-icon img {
+  width: 40px;
+  height: 40px;
+  filter: grayscale(100%); 
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.social-icon img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2); 
+}
