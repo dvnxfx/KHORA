@@ -307,3 +307,10 @@ section {
       background-color: #000;
       color: #fff;
     }
+
+    #musica {
+    max-width: 600px;   
+    margin: 20px auto;  
+    border-radius: 12px;
+    overflow: hidden; 
+  }
