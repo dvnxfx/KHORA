@@ -313,8 +313,19 @@ section {
     }
 
     #musica {
-    max-width: 700px;   
-    margin: 40px auto;  
-    border-radius: 3px;
-    overflow: hidden; 
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    margin-top: 20px; /* opcional */
+    }
+
+    #musica audio {
+    width: 100%;
+    max-width: 400px;       /* tamanho parecido com os botões */
+    padding: 0.5rem 1rem;
+    border: 3px solid #000; /* mesma espessura que btn-retro */
+    border-radius: 6px;     /* mesma do btn-retro */
+    box-shadow: 5px 5px 0px #000; /* sombra parecida */
+    background: #fff;       /* mesma cor do btn-retro */
+    accent-color: #000;     /* cor dos controles */
+    font-family: 'Courier New', monospace; /* pra combinar com fonte dos botões */
     }
