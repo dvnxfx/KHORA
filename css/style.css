@@ -205,7 +205,7 @@ code, pre {
   /* opacity: 0.7; */
 }
 
-/* Utilitários */
+
 section {
   margin-bottom: 2.5rem;
 }
@@ -214,7 +214,7 @@ section {
   margin-top: 1.5rem;
 }
 
-/* ===== RESPONSIVIDADE ===== */
+
 @media (max-width: 768px) {
   .neubrutal-box {
     margin: 20px auto;
@@ -232,7 +232,7 @@ section {
   }
 }
 
-/* ===== ANIMAÇÕES ===== */
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -240,8 +240,8 @@ section {
 
 .pandora-container {
       max-width: 800px;
-      margin: 4rem auto;
-      padding: 4rem;
+      margin: 7rem auto;
+      padding: 5rem;
       border: 4px solid var(--black);
       box-shadow: 8px 8px 0 rgba(0,0,0,0.66);
       border-radius: var(--radius);
@@ -254,13 +254,13 @@ section {
     .pandora-title {
       font-weight: 700;
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 8rem;
       text-transform: uppercase;
     }
     
     .category-title {
       margin-top: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       font-weight: bold;
       border-bottom: 2px solid #000;
       padding-bottom: 0.5rem;
@@ -270,12 +270,14 @@ section {
     .pandora-links {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1rem;
+      margin-bottom: 20px;
+      gap: 2rem;
+      margin-bottom: 3rem;
     }
     
     .pandora-link {
       display: block;
-      padding: 1rem;
+      padding: 1.2rem;
       background-color: #f8f9fa;
       border: 2px solid #000;
       color: #000;
@@ -293,14 +295,16 @@ section {
     
     .back-link {
       display: inline-block;
-      margin-top: 3rem;
-      padding: 0.8rem 1.5rem;
+      margin-top: 4rem;
+      padding: 1rem 2rem;
       background-color: #fff;
       border: 2px solid #000;
       color: #000;
       text-decoration: none;
       font-weight: bold;
       transition: all 0.2s ease;
+      margin-top: 5rem; 
+      margin-bottom: 5rem;
     }
     
     .back-link:hover {
@@ -309,8 +313,8 @@ section {
     }
 
     #musica {
-    max-width: 600px;   
-    margin: 20px auto;  
-    border-radius: 12px;
+    max-width: 700px;   
+    margin: 40px auto;  
+    border-radius: 3px;
     overflow: hidden; 
-  }
+    }
